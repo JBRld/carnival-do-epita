@@ -49,6 +49,7 @@ class JbrldPlayer extends Player
         {
           if ($this->result->getNbRound() < 10)
             return $this->result->getChoicesFor($this->opponentSide);
+          //je retourne l'opposé du tour précédent pendant dix tours pour brouiller les stats de l'adversaire
           else if ($this->result->getChoicesFor($this->opponentSide) == parent::paperChoice())
             return parent::rockChoice();
           else if ($this->result->getChoicesFor($this->opponentSide) == parent::rockChoice())
@@ -56,7 +57,7 @@ class JbrldPlayer extends Player
           else if ($this->result->getChoicesFor($this->opponentSide) == parent::scissorsChoice())
             return parent::paperChoice();
         }
-        // on constate qu'il faut jouer le contraire du précédent
+        // A partir du 10 round, je joue le perdant du tour d'avant
           //return parent::paperChoice();            
   }
 };
