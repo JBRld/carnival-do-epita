@@ -43,7 +43,15 @@ class JbrldPlayer extends Player
         
         if (0 == $this->result->getLastChoiceFor($this->mySide))
           return parent::rockChoice();
-        return $this->result->getLastScoreFor($this->opponentSide);
-        //return parent::paperChoice();            
+        else
+        {
+          if ($this->result->getChoicesFor($this->opponentSide) == parent::paperChoice())
+            return parent::rockChoice();
+          if ($this->result->getChoicesFor($this->opponentSide) == parent::rockChoice())
+            return parent::scissors();  
+          if ($this->result->getChoicesFor($this->opponentSide) == parent::scissorsChoice())
+            return parent::paperChoice();
+        }
+          //return parent::paperChoice();            
   }
 };
