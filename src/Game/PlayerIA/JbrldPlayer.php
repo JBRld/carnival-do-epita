@@ -40,8 +40,6 @@ class JbrldPlayer extends Player
         // -------------------------------------    -----------------------------------------------------
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
-        
-        return parent::paperChoice();
 
         if (0 == $this->result->getLastChoiceFor($this->mySide))
           return parent::paperChoice();
