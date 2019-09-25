@@ -4,12 +4,12 @@ namespace Hackathon\PlayerIA;
 use Hackathon\Game\Result;
 
 /**
- * Class PaperJBRld
+ * Class Jbrld
  * @package Hackathon\PlayerIA
  * @author JBRld
  *
  */
-class PaperJBRld extends Player
+class JbrldPlayer extends Player
 {
     protected $mySide;
     protected $opponentSide;
@@ -27,7 +27,7 @@ class PaperJBRld extends Player
         // How to get all the Choices          ?    $this->result->getChoicesFor($this->mySide)
         // How to get the opponent Last Choice ?    $this->result->getChoicesFor($this->opponentSide)
         // -------------------------------------    -----------------------------------------------------
-       // How to get my Last Score            ?    $this->result->getLastScoreFor($this->mySide)
+        // How to get my Last Score            ?    $this->result->getLastScoreFor($this->mySide)
         // How to get the opponent Last Score  ?    $this->result->getLastScoreFor($this->opponentSide)
         // -------------------------------------    -----------------------------------------------------
         // How to get the stats                ?    $this->result->getStats()
@@ -41,6 +41,8 @@ class PaperJBRld extends Player
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
         
+        If 0 (first round)
+          return parent::rockChoice();
         return parent::paperChoice();            
   }
 };
