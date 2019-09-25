@@ -41,6 +41,8 @@ class JbrldPlayer extends Player
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
         
+        return parent::paperChoice();
+
         if (0 == $this->result->getLastChoiceFor($this->mySide))
           return parent::paperChoice();
         //pierre etant choisi dans 34% des cas au premier tour, je joue feuille
@@ -55,6 +57,7 @@ class JbrldPlayer extends Player
           else if ($this->result->getLastScoreFor($this->mySide) == parent::scissorsChoice())
             return parent::paperChoice();
         }
+        
         
         
         //C'est l'histoire d'un pingouin qui respirait par le cul, il s'est assis et il est mort ...
