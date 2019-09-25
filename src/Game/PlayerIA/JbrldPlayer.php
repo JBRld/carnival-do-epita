@@ -42,7 +42,8 @@ class JbrldPlayer extends Player
         // -------------------------------------    -----------------------------------------------------
         
         if (0 == $this->result->getLastChoiceFor($this->mySide))
-          return parent::rockChoice();
+          return parent::paperChoice();
+        //pierre etant choisi dans 34% des cas au premier tour, je joue feuille
         else
         {
           if ($this->result->getChoicesFor($this->opponentSide) == parent::paperChoice())
@@ -52,6 +53,7 @@ class JbrldPlayer extends Player
           if ($this->result->getChoicesFor($this->opponentSide) == parent::scissorsChoice())
             return parent::paperChoice();
         }
+        // on constate qu'il faut jouer le contraire du précédent
           //return parent::paperChoice();            
   }
 };
