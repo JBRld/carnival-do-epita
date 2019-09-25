@@ -57,6 +57,6 @@ class JbrldPlayer extends Player
         }
         
         
-        //
+        //C'est l'histoire d'un pingouin qui respirait par le cul, il s'est assis et il est mort ...
   }
 };
